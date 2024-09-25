@@ -1,0 +1,53 @@
+{
+  "name": "tesla-energy-battery-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "dev": "next dev -p 8000",
+    "start": "next start -p 8000",
+    "build": "next build",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --run --coverage",
+    "lint": "next lint",
+    "format:fix": "lint-staged",
+    "format:check": "prettier --check --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "next": "14.2.13",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^2.1.1",
+    "daisyui": "^4.12.10",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.6",
+    "jsdom": "^25.0.1",
+    "lint-staged": "^15.2.10",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "vitest": "^2.1.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
