@@ -1,20 +1,11 @@
 {
-  "env": {
-    browser: true,
-    node: true,
-    es6: true
-  },
-  "extends": [
-    "next/core-web-vitals",
-    "next/typescript",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["next/core-web-vitals", "next/typescript", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
-     "react/prop-types": 0,
-     "no-unused-vars": 0,
-     "react/no-unescaped-entities": 0
+    "react/prop-types": 0,
+    "no-unused-vars": 0,
+    "react/no-unescaped-entities": 0
   }
 }

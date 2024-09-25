@@ -1,6 +1,7 @@
 ## Getting Started
 
 ### Local Setup
+
 First, run the development server:
 
 ```bash

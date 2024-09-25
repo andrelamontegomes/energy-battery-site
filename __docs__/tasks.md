@@ -4,12 +4,14 @@
   - Customized
     - reccomendation
 - [] Setup UI
+
   - [x] lint/format eslint/prettier
   - [x] commitlint
   - [x] husky git hooks
   - [x] vitest
 
 - [] Components
+
   - [x] daisyui
   - Header
   - Site
@@ -25,10 +27,12 @@
   - Modal "Product Details"
 
 - [] Error Handling
+
   - [] Input Fields
   - [] mobile responsiveness
 
 - Surprising feaures
+
   - Budget/reccomendation
   - animation
   - save user lcoalstorage
