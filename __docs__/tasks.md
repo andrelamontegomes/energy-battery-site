@@ -10,7 +10,7 @@
   - [x] vitest
 
 - [] Components
-  - [] daisyui
+  - [x] daisyui
   - Header
   - Site
     - SiteDetail
@@ -22,14 +22,16 @@
     - Floor Dimension Length
     - Total Energy | Input Field
     - Budget | Input Field
-  - Modal
+  - Modal "Product Details"
 
 - [] Error Handling
   - [] Input Fields
+  - [] mobile responsiveness
 
 - Surprising feaures
   - Budget/reccomendation
   - animation
+  - save user lcoalstorage
   - [] docker
 
 - [] Deployments - pipelines
