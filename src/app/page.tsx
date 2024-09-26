@@ -1,10 +1,26 @@
+'use client';
+
 import { useState } from 'react';
 
 import NumberInput from '@/components/NumberInput';
 
 export default function Home() {
-  const [userLandSize, setUserLandSize] = useState(100);
-  const handleChange = () => {};
+  // User input
+  const [userDimensions, setUserDimensions] = useState<string>('100');
+  const [userBudget, setUserBudget] = useState<string>('100');
+  const [userEnergyNeeds, setUserEnergyNeeds] = useState<string>('100');
+
+  // Battery Options
+  const [megapack2xls, setMegapack2xls] = useState<string>('5');
+  const [megapack2s, setMegapack2s] = useState<string>('5');
+  const [megapacks, setMegapacks] = useState<string>('5');
+  const [powerpacks, setPowerpacks] = useState<string>('5');
+  const [transformers, setTransformers] = useState<string>('5');
+
+  //const [recommendation, setRecommendation] = useState<type | null>("");
+  // const [calculation, setCalculation] = useState<CalculationType>({});
+
+  const [errors, setErrors] = useState<string[]>([]);
 
   return (
     <div className='flex w-full flex-row'>
@@ -27,17 +43,18 @@ export default function Home() {
           <div className='space-y-5'>
             <NumberInput
               label='Land Size (sq ft)'
-              placeholder='100'
+              value={userDimensions}
+              onChange={setUserDimensions}
             />
 
             <NumberInput
               label='Budget'
-              placeholder='100'
+              value={userBudget}
             />
 
             <NumberInput
               label='Energy needs'
-              placeholder='100'
+              value={userBudget}
             />
           </div>
           <div className='prose flex flex-row justify-around'>
@@ -53,19 +70,19 @@ export default function Home() {
           <div className='space-y-5'>
             <NumberInput
               label='Megapack 2XL'
-              placeholder='100'
+              value={userBudget}
             />
             <NumberInput
               label='Megapack 2'
-              placeholder='100'
+              value={userBudget}
             />
             <NumberInput
               label='Megapack'
-              placeholder='100'
+              value={userBudget}
             />
             <NumberInput
               label='Powerpack'
-              placeholder='100'
+              value={userBudget}
             />
           </div>
           <div className='flex flex-col space-y-5'>

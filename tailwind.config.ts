@@ -7,9 +7,11 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {},
   plugins: [require('@tailwindcss/typography'), daisyui], // eslint-disable-line @typescript-eslint/no-require-imports
   daisyui: {
+    themes: ['light'],
     logs: false,
   },
 };
