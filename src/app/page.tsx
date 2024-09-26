@@ -16,16 +16,31 @@ export default function Home() {
             </p>
             <a>View Product Details</a>
           </div>
-          <div className='flex flex-col'>
-            <label>Land size</label>
-            <label>Budget</label>
-            <label>Energy needs</label>
+          <div className='space-y-5'>
+            <NumberInput
+              label='Land Size (sq ft)'
+              placeholder='100'
+            />
+            <NumberInput
+              label='Budget'
+              placeholder='100'
+            />
+            <NumberInput
+              label='Energy needs'
+              placeholder='100'
+            />
           </div>
-          <div>
-            <label>Power</label>
-            <label>Energy</label>
+          <div className='prose flex flex-row justify-around'>
+            <div className='flex flex-col'>
+              <h2>25.1MW</h2>
+              <span>Power</span>
+            </div>
+            <div className='flex flex-col'>
+              <h2>38.3MWh</h2>
+              <span>Energy</span>
+            </div>
           </div>
-          <div>
+          <div className='space-y-5'>
             <NumberInput
               label='Megapack 2XL'
               placeholder='100'
