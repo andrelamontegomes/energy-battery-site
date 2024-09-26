@@ -7,5 +7,14 @@
   "trailingComma": "es5",
   "bracketSpacing": true,
   "singleAttributePerLine": true,
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "importOrder": [
+    "^(react/(.*)$)|^(react$)",
+    "^(next/(.*)$)|^(next$)",
+    "",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^[@]",
+    "^[.]"
+  ],
+  "plugins": ["prettier-plugin-tailwindcss", "@ianvs/prettier-plugin-sort-imports"]
 }

@@ -1,5 +1,11 @@
+import { useState } from 'react';
+
 import NumberInput from '@/components/NumberInput';
+
 export default function Home() {
+  const [userLandSize, setUserLandSize] = useState(100);
+  const handleChange = () => {};
+
   return (
     <div className='flex w-full flex-row'>
       <div className='w-2/3 px-10 pb-5'>
