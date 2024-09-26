@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import daisyui from 'daisyui';
 
 const config: Config = {
   content: [
@@ -7,6 +8,9 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {},
-  plugins: [require('@tailwindcss/typography'), require('daisyui')], // eslint-disable-line @typescript-eslint/no-require-imports
+  plugins: [require('@tailwindcss/typography'), daisyui], // eslint-disable-line @typescript-eslint/no-require-imports
+  daisyui: {
+    logs: false,
+  },
 };
 export default config;

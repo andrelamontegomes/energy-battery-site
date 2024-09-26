@@ -8,12 +8,14 @@ export default function Home() {
       <div className='w-1/3'>
         <div className='flex flex-col pb-3 pr-5'>
           <div className='prose'>
-            <h1>Design Your System</h1>
+            <h1>Desgn Your System</h1>
+
             <p>
               Megapack enables low-cost, high-density commercial and utility projects at large
               scale. It ships ready to install with fully integrated battery modules, inverters, and
               thermal systems.
             </p>
+
             <a>View Product Details</a>
           </div>
           <div className='space-y-5'>
@@ -21,10 +23,12 @@ export default function Home() {
               label='Land Size (sq ft)'
               placeholder='100'
             />
+
             <NumberInput
               label='Budget'
               placeholder='100'
             />
+
             <NumberInput
               label='Energy needs'
               placeholder='100'
@@ -57,6 +61,20 @@ export default function Home() {
               label='Powerpack'
               placeholder='100'
             />
+          </div>
+          <div className='flex flex-col space-y-5'>
+            <div className='flex flex-row'>
+              <h3>Estimated Price</h3>
+              <p>$12,000,000</p>
+            </div>
+            <div className='flex flex-row'>
+              <h3>Est Annual Maintenance</h3>
+              <p>$8,200</p>
+            </div>
+            <div className='flex flex-row'>
+              <h3>Due Today</h3>
+              <p>$1,000</p>
+            </div>
           </div>
         </div>
       </div>
