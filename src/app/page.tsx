@@ -6,14 +6,19 @@ export default function Home() {
       </div>
       <div className='w-1/3'>
         <div className='flex flex-col px-10 pb-3'>
-          <div>
-            <h1>Design Battery Site</h1>
+          <div className='prose'>
+            <h1>Design Your System</h1>
             <p>
               Megapack enables low-cost, high-density commercial and utility projects at large
               scale. It ships ready to install with fully integrated battery modules, inverters, and
               thermal systems.
             </p>
-            <p>View Product Details</p>
+            <a>View Product Details</a>
+          </div>
+          <div className='flex flex-col'>
+            <label>Land size</label>
+            <label>Budget</label>
+            <label>Energy needs</label>
           </div>
           <div>
             <label>Power</label>
