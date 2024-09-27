@@ -1,8 +1,15 @@
+'use client';
+
+import { useContext } from 'react';
+
+import { SystemContext } from '@/providers/SystemProvider';
 import NumberInput from '@/components/ui/NumberInput';
 
 export default function SystemForm() {
+  const system = useContext(SystemContext);
+  console.log(system);
   return (
-    <div className='prose flex flex-col pb-3 pr-5'>
+    <div className='flex flex-col pb-3 pr-5'>
       <div className=''>
         <h1>Design Your System</h1>
 
@@ -18,7 +25,6 @@ export default function SystemForm() {
         <NumberInput
           name='userDimensions'
           label='Land Size (sq ft)'
-          onChange={(event) => setUserDimensions(event.target.value)}
         />
         <NumberInput
           name='userBudget'
@@ -44,9 +50,9 @@ export default function SystemForm() {
         <NumberInput label='Powerpack' />
       </div>
       <div className='flex flex-col space-y-5'>
-        <div className='flex flex-row justify-between'>
-          <h3>Estimated Price</h3>
-          <p>$12,000,000</p>
+        <div className='flex flex-row justify-between items-center'>
+          <h3 className=''>Estimated Price</h3>
+          <p className=''>$12,000,000</p>
         </div>
         <div className='flex flex-row justify-between'>
           <h3>Est Annual Maintenance</h3>

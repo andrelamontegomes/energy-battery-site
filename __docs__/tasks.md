@@ -35,7 +35,7 @@
 
   - Budget/reccomendation
   - animation
-  - save user lcoalstorage
+  - save user url
   - [] docker
 
 - [] Deployments - pipelines
