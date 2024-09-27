@@ -14,17 +14,31 @@ export default function SystemProvider({ children }: { children: React.ReactNode
     energy: '50',
   });
 
-  // Battery Options
-  const [system, setSystem] = useState<SystemConfig>({
-    megapack2xls: '3',
-    megapack2s: '1',
+  const handleRequisitesChange = (e) => {
+    if (!isNaN(e.target.value)) {
+      setUserRequisites((prevState) => ({ ...prevState, [e.target.name]: [e.target.value] }));
+    }
+  };
+
+  // Devices Options
+  const [systemConfig, setSystemConfig] = useState<SystemConfig>({
+    megapack2xls: '1',
+    megapack2s: '3',
     megapacks: '2',
-    powerpacks: '0',
+    powerpacks: '1',
     transformers: '1',
   });
 
+  const handleSystemChange = (e) => {
+    if (!isNaN(e.target.value)) {
+      setSystemConfig((prevState) => ({ ...prevState, [e.target.name]: [e.target.value] }));
+    }
+  };
+
   return (
-    <SystemContext.Provider value={{ system, setSystem, userRequisites, setUserRequisites }}>
+    <SystemContext.Provider
+      value={{ systemConfig, handleSystemChange, userRequisites, handleRequisitesChange }}
+    >
       {children}
     </SystemContext.Provider>
   );
