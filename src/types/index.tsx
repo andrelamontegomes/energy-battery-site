@@ -1,15 +1,15 @@
 interface UserRequisites {
-  dimensions: number | null;
-  budget: number | null;
-  energy: number | null;
+  dimensions: string | null;
+  budget: string | null;
+  energy: string | null;
 }
 
 interface SystemConfig {
-  megapack2xls: number | null;
-  megapack2s: number | null;
-  megapacks: number | null;
-  powerpacks: number | null;
-  transformers: number | null;
+  megapack2xls: string | null;
+  megapack2s: string | null;
+  megapacks: string | null;
+  powerpacks: string | null;
+  transformers: string | null;
 }
 
 export type { UserRequisites, SystemConfig };

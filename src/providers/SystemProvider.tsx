@@ -7,26 +7,25 @@ import type { SystemConfig, UserRequisites } from '@/types';
 export const SystemContext = createContext({});
 
 export default function SystemProvider({ children }: { children: React.ReactNode }) {
-  //TODO: base64 url to share url
-  
-  //const [recommendation, setRecommendation] = useState<type | null>("");
-  // const [errors, setErrors] = useState<string[]>([]);
-  // const [calculation, setCalculation] = useState<CalculationType>({});
   // User input
   const [userRequisites, setUserRequisites] = useState<UserRequisites>({
-    dimensions: 0,
-    budget: 0,
-    energy: 0,
+    dimensions: '100',
+    budget: '10000',
+    energy: '50',
   });
 
   // Battery Options
   const [system, setSystem] = useState<SystemConfig>({
-    megapack2xls: 0,
-    megapack2s: 0,
-    megapacks: 0,
-    powerpacks: 0,
-    transformers: 0,
+    megapack2xls: '3',
+    megapack2s: '1',
+    megapacks: '2',
+    powerpacks: '0',
+    transformers: '1',
   });
 
-  return <SystemContext.Provider value={system}>{children}</SystemContext.Provider>;
+  return (
+    <SystemContext.Provider value={{ system, setSystem, userRequisites, setUserRequisites }}>
+      {children}
+    </SystemContext.Provider>
+  );
 }
