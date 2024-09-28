@@ -9,7 +9,7 @@
   - [x] commitlint
   - [x] husky git hooks
   - [x] vitest
-
+j
 - [] Components
 
   - [x] daisyui
@@ -26,16 +26,19 @@
     - Budget | Input Field
   - Modal "Product Details"
 
-- [] Error Handling
+- [] claclulation working
+- [] 4 batteries add transformer
+- [] site layouts should exceed 100ft width
 
+- [] Error Handling
   - [] Input Fields
   - [] mobile responsiveness
 
 - Surprising feaures
-
   - Budget/reccomendation
   - animation
   - save user url
   - [] docker
-
-- [] Deployments - pipelines
+- tests
+- documentation
+    - [] Deployments - pipelines

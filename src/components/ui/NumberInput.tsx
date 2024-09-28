@@ -7,9 +7,9 @@ interface NumberInputProps extends ComponentProps<'input'> {
 export default function NumberInput({ label, value, onChange, ...props }: NumberInputProps) {
   return (
     <div className='form-control flex flex-row justify-between items-center'>
-      {label && <label className='label'>{label}</label>}
+      {label && <label className='text-gray-700 font-bold'>{label}</label>}
       <input
-        className='input input-bordered input-sm w-20'
+        className='input bordered input-sm w-20 bg-gray-100'
         inputMode='numeric'
         pattern='[0-9]*'
         value={value}

@@ -2,26 +2,17 @@
 
 import { createContext, useState } from 'react';
 
-import type { SystemConfig, UserRequisites } from '@/types';
+import type { SystemConfig } from '@/types';
 
-export const SystemContext = createContext({});
+interface SystemContextType {
+  system: SystemConfig;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export const SystemContext = createContext<SystemContextType>({} as SystemContextType);
 
 export default function SystemProvider({ children }: { children: React.ReactNode }) {
-  // User input
-  const [userRequisites, setUserRequisites] = useState<UserRequisites>({
-    dimensions: '100',
-    budget: '10000',
-    energy: '50',
-  });
-
-  const handleRequisitesChange = (e) => {
-    if (!isNaN(e.target.value)) {
-      setUserRequisites((prevState) => ({ ...prevState, [e.target.name]: [e.target.value] }));
-    }
-  };
-
-  // Devices Options
-  const [systemConfig, setSystemConfig] = useState<SystemConfig>({
+  const [system, setSystem] = useState({
     megapack2xls: '1',
     megapack2s: '3',
     megapacks: '2',
@@ -29,17 +20,13 @@ export default function SystemProvider({ children }: { children: React.ReactNode
     transformers: '1',
   });
 
-  const handleSystemChange = (e) => {
-    if (!isNaN(e.target.value)) {
-      setSystemConfig((prevState) => ({ ...prevState, [e.target.name]: [e.target.value] }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    if (!isNaN(Number(e.target.value))) {
+      setSystem((prevState) => ({ ...prevState, [e.target.name]: [e.target.value] }));
     }
   };
 
   return (
-    <SystemContext.Provider
-      value={{ systemConfig, handleSystemChange, userRequisites, handleRequisitesChange }}
-    >
-      {children}
-    </SystemContext.Provider>
+    <SystemContext.Provider value={{ system, handleChange }}>{children}</SystemContext.Provider>
   );
 }
