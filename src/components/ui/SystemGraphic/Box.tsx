@@ -1,44 +1,24 @@
-'use client';
+import React, { useRef, useState } from 'react';
 
-import { useContext } from 'react';
+import { Canvas, ThreeElements, useFrame } from '@react-three/fiber';
+import * as THREE from 'three';
 
-import { SystemContext } from '@/providers/SystemProvider';
-
-export default function Box() {
-  const { system } = useContext(SystemContext);
-
+export default function Box(props: ThreeElements['mesh']) {
+  const meshRef = useRef<THREE.Mesh>(null!);
+  const [hovered, setHover] = useState(false);
+  const [active, setActive] = useState(false);
+  useFrame((state, delta) => (meshRef.current.rotation.x += delta));
   return (
-    <>
-      {Array.from({ length: system.megapack2xls }, (_, i) => (
-        <div
-          className='w-40 h-10 rounded bg-red-300'
-          key={i}
-        ></div>
-      ))}
-      {Array.from({ length: system.megapack2s }, (_, i) => (
-        <div
-          className='w-20 h-10 rounded bg-yellow-300'
-          key={i}
-        ></div>
-      ))}
-      {Array.from({ length: system.megapacks }, (_, i) => (
-        <div
-          className='w-20 h-10 rounded bg-blue-300'
-          key={i}
-        ></div>
-      ))}
-      {Array.from({ length: system.powerpacks }, (_, i) => (
-        <div
-          className='w-10 h-10 rounded bg-green-300'
-          key={i}
-        ></div>
-      ))}
-      {Array.from({ length: system.transformers }, (_, i) => (
-        <div
-          className='w-10 h-10 rounded bg-black'
-          key={i}
-        ></div>
-      ))}
-    </>
+    <mesh
+      {...props}
+      ref={meshRef}
+      scale={active ? 1.5 : 1}
+      onClick={(event) => setActive(!active)}
+      onPointerOver={(event) => setHover(true)}
+      onPointerOut={(event) => setHover(false)}
+    >
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color={hovered ? 'hotpink' : '#2f74c0'} />
+    </mesh>
   );
 }
