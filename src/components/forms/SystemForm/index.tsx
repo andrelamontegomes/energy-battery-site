@@ -1,3 +1,5 @@
+import Button from '@/components/ui/Button';
+
 import RequisitesSection from './RequisitesSection';
 import SystemSection from './SystemSection';
 
@@ -16,6 +18,10 @@ export default function SystemForm() {
       </div>
       <RequisitesSection />
       <SystemSection />
+      <Button
+        icon
+        text='Share Design'
+      />
     </div>
   );
 }
