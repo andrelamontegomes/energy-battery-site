@@ -16,7 +16,6 @@ export default function SystemCanvas() {
   let objects = [];
 
   useEffect(() => {
-    console.log(system);
   }, [system]);
 
   return (
