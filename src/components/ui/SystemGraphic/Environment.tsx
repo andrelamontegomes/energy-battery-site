@@ -52,4 +52,6 @@ const Environment = memo(({ direction = [5, 5, 5] }) => (
   </>
 ));
 
+Environment.displayName = 'Environment';
+
 export default Environment;
