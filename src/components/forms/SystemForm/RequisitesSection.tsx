@@ -12,19 +12,19 @@ export default function RequisitesSection() {
     <div className='space-y-5'>
       <NumberInput
         name='dimensions'
-        label='Land Dimension (sq ft)'
+        label='Land Dimension (Sq Ft)'
         value={requisites.dimensions}
         onChange={handleChange}
       />
       <NumberInput
         name='budget'
-        label='Budget'
+        label='Budget ($)'
         value={requisites.budget}
         onChange={handleChange}
       />
       <NumberInput
         name='energy'
-        label='Energy Goal'
+        label='Energy Goal (MW)'
         value={requisites.energy}
         onChange={handleChange}
       />

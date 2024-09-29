@@ -1,6 +1,6 @@
 import RequisitesProvider from '@/providers/RequisitesProvider';
 import SystemProvider from '@/providers/SystemProvider';
-import SystemGraphic from '@/components/ui/SystemGraphic';
+import SystemCanvas from '@/components/ui/SystemCanvas';
 import SystemForm from '@/components/forms/SystemForm';
 
 export default function Home() {
@@ -9,7 +9,9 @@ export default function Home() {
       <SystemProvider>
         <div className='flex w-full flex-row'>
           <div className='w-2/3 px-10'>
-            <SystemGraphic />
+            <div className='h-full w-full rounded-xl bg-gray-100'>
+              <SystemCanvas />
+            </div>
           </div>
           <div className='w-1/3'>
             <SystemForm />
