@@ -27,24 +27,28 @@ export default function SystemSection() {
       </div>
       <div className='space-y-5'>
         <NumberInput
+          dotStyle='bg-white'
           name='megapack2xls'
           label='Megapack 2XL'
           value={system.megapack2xls}
           onChange={handleChange}
         />
         <NumberInput
+          dotStyle='bg-yellow-300'
           name='megapack2s'
           label='Megapack 2'
           value={system.megapack2s}
           onChange={handleChange}
         />
         <NumberInput
+          dotStyle='bg-orange-400'
           name='megapacks'
           label='Megapack'
           value={system.megapacks}
           onChange={handleChange}
         />
         <NumberInput
+          dotStyle='bg-red-500'
           name='powerpacks'
           label='Powerpacks'
           value={system.powerpacks}
@@ -52,6 +56,7 @@ export default function SystemSection() {
         />
         <NumberInput
           disabled
+          dotStyle='bg-blue-700'
           label='Transformers'
           value={system.transformers}
         />

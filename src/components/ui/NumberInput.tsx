@@ -3,12 +3,26 @@ import { ComponentProps } from 'react';
 interface NumberInputProps extends ComponentProps<'input'> {
   label?: string;
   error?: boolean;
+  dotStyle?: string;
 }
 
-export default function NumberInput({ label, value, onChange, ...props }: NumberInputProps) {
+export default function NumberInput({
+  dotStyle,
+  label,
+  value,
+  onChange,
+  ...props
+}: NumberInputProps) {
   return (
     <div className='form-control flex flex-row justify-between items-center'>
-      {label && <label className='text-gray-700 font-bold'>{label}</label>}
+      {label && (
+        <label className='flex flex-row items-center text-gray-700 font-bold'>
+          {dotStyle && (
+            <div className={'mr-4 w-5 h-5 rounded-full border shadow-md ' + dotStyle}></div>
+          )}
+          {label}
+        </label>
+      )}
       <input
         className='input bordered input-sm w-20 bg-gray-100'
         inputMode='numeric'
