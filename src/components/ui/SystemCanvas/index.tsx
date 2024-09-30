@@ -15,8 +15,8 @@ export default function SystemCanvas() {
   const { system } = useContext(SystemContext);
   let objects = [];
 
-  useEffect(() => {
-  }, [system]);
+  // useEffect(() => {
+  // }, [system]);
 
   return (
     <Canvas
@@ -30,7 +30,6 @@ export default function SystemCanvas() {
       <Megapack />
       <Powerpack position={[5, 0, 0]} />
       <Transformer position={[0, 0, 5]} />
-      <Environment />
     </Canvas>
   );
 }

@@ -16,13 +16,29 @@ export default function SystemProvider({ children }: { children: React.ReactNode
     megapack2xls: '1',
     megapack2s: '3',
     megapacks: '2',
-    powerpacks: '1',
-    transformers: '1',
+    powerpacks: '2',
+    transformers: '2',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     if (!isNaN(Number(e.target.value))) {
-      setSystem((prevState) => ({ ...prevState, [e.target.name]: [e.target.value] }));
+      setSystem((prevState) => {
+        const newState = {
+          ...prevState,
+          [e.target.name]: e.target.value,
+        };
+
+        let totalBatteries = 0;
+        for (const device in newState) {
+          if (device !== 'transformers') {
+            totalBatteries += Number(newState[device]);
+          }
+        }
+        return {
+          ...newState,
+          transformers: Math.floor(totalBatteries / 4),
+        };
+      });
     }
   };
 
