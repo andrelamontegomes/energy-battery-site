@@ -61,10 +61,6 @@ export default function SystemSection() {
           <h3>Estimated Price</h3>
           <p>${numberWithCommas(totalCost)}</p>
         </div>
-        <div className='flex flex-row justify-between'>
-          <h3>Est Annual Maintenance</h3>
-          <p>${numberWithCommas(totalCost)}</p>
-        </div>
         <div className='flex flex-row justify-between text-gray-700 text-xl'>
           <h3>Due Today</h3>
           <p>$1,000</p>

@@ -35,9 +35,8 @@ j
   - [] mobile responsiveness
 
 - Surprising feaures
-  - Budget/reccomendation
-  - animation
   - save user url
+  - Budget/reccomendation
   - [] docker
 - tests
 - documentation
