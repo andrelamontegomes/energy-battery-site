@@ -13,9 +13,9 @@ export const RequisitesContext = createContext<RequisitesContextType>({} as Requ
 
 export default function RequisitesProvider({ children }: { children: React.ReactNode }) {
   const [requisites, setRequisites] = useState<UserRequisites>({
-    dimensions: '500',
-    budget: '100000',
-    energy: '50',
+    dimensions: '2000',
+    budget: '500000',
+    energy: '150',
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     if (!isNaN(Number(e.target.value))) {
