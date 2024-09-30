@@ -2,7 +2,7 @@ import { Addition, Base, Geometry, Subtraction } from '@react-three/csg';
 import { ThreeElements } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const box = new THREE.BoxGeometry(2.9, 2, 1);
+const box = new THREE.BoxGeometry(1.9, 2, 1);
 
 export default function Megapack(props: ThreeElements['mesh']) {
   return (
@@ -19,7 +19,7 @@ export default function Megapack(props: ThreeElements['mesh']) {
         />
       </Geometry>
       <meshStandardMaterial
-        color='white'
+        color='orange'
         envMapIntensity={0.25}
       />
     </mesh>

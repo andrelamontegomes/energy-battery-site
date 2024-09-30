@@ -2,6 +2,7 @@ import { ComponentProps } from 'react';
 
 interface NumberInputProps extends ComponentProps<'input'> {
   label?: string;
+  error?: boolean;
 }
 
 export default function NumberInput({ label, value, onChange, ...props }: NumberInputProps) {

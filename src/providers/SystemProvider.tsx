@@ -13,11 +13,11 @@ export const SystemContext = createContext<SystemContextType>({} as SystemContex
 
 export default function SystemProvider({ children }: { children: React.ReactNode }) {
   const [system, setSystem] = useState({
-    megapack2xls: '1',
-    megapack2s: '3',
+    megapack2xls: '20',
+    megapack2s: '10',
     megapacks: '2',
-    powerpacks: '2',
-    transformers: '2',
+    powerpacks: '5',
+    transformers: '9',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {

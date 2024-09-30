@@ -5,8 +5,8 @@ import SystemSection from './SystemSection';
 
 export default function SystemForm() {
   return (
-    <div className='flex flex-col pb-3 px-5'>
-      <div className='prose mb-10'>
+    <div className='flex flex-col pb-3 px-10'>
+      <div className='prose md:prose-sm mb-10'>
         <h1>Design Your System</h1>
 
         <p>

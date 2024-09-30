@@ -13,8 +13,8 @@ export const RequisitesContext = createContext<RequisitesContextType>({} as Requ
 
 export default function RequisitesProvider({ children }: { children: React.ReactNode }) {
   const [requisites, setRequisites] = useState<UserRequisites>({
-    dimensions: '10000',
-    budget: '5000000',
+    dimensions: '500',
+    budget: '100000',
     energy: '50',
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
