@@ -15,34 +15,40 @@ export default function RequisitesSection() {
   const totalCost = calcTotalCost(system);
   const totalDimension = calcTotalDimension(system);
 
+  const dimensionError = totalDimension > Number(requisites.dimensions);
+  const costError = totalCost > Number(requisites.budget);
+  const energyError = totalEnergy > Number(requisites.energy);
+
   return (
     <>
-      <Alert
-        icon
-        text='Error in form'
-      />
       <div className='space-y-5'>
         <NumberInput
-          error={totalDimension > Number(requisites.dimensions) && 'System has a larger footprint'}
+          error={dimensionError}
           name='dimensions'
           label='Land Dimension (Sq Ft)'
           value={requisites.dimensions}
           onChange={handleChange}
         />
         <NumberInput
-          error={totalCost > Number(requisites.budget)}
+          error={costError}
           name='budget'
           label='Budget ($)'
           value={requisites.budget}
           onChange={handleChange}
         />
         <NumberInput
-          error={totalEnergy > Number(requisites.energy)}
+          error={energyError}
           name='energy'
           label='Energy Goal (MW)'
           value={requisites.energy}
           onChange={handleChange}
         />
+        {(dimensionError || costError || energyError) && (
+          <Alert
+            icon
+            text='Your current design does not fulfill your requirements'
+          />
+        )}
       </div>
     </>
   );

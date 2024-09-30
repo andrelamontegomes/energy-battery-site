@@ -8,6 +8,7 @@ interface NumberInputProps extends ComponentProps<'input'> {
 
 export default function NumberInput({
   dotStyle,
+  error,
   label,
   value,
   onChange,
@@ -24,7 +25,7 @@ export default function NumberInput({
         </label>
       )}
       <input
-        className='input bordered input-sm w-20 bg-gray-100'
+        className={'input bordered input-sm w-24 bg-gray-100' + (error ? ' bg-red-200' : '')}
         inputMode='numeric'
         pattern='[0-9]*'
         value={value}

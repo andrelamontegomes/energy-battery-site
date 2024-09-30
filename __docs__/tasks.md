@@ -29,7 +29,6 @@ j
 - [] claclulation working
 - [] 4 batteries add transformer
 - [] site layouts should exceed 100ft width
-- [] debounced input
 
 - [] Error Handling
   - [] Input Fields
