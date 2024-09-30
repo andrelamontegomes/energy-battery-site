@@ -2,7 +2,7 @@ import { Base, Geometry } from '@react-three/csg';
 import { ThreeElements } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const box = new THREE.BoxGeometry(1, 2, 1);
+const box = new THREE.BoxGeometry(0.9, 2, 1);
 
 export default function Powerpack(props: ThreeElements['mesh']) {
   return (

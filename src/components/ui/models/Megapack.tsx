@@ -2,7 +2,7 @@ import { Addition, Base, Geometry, Subtraction } from '@react-three/csg';
 import { ThreeElements } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const box = new THREE.BoxGeometry(3, 2, 1);
+const box = new THREE.BoxGeometry(2.9, 2, 1);
 
 export default function Megapack(props: ThreeElements['mesh']) {
   return (
