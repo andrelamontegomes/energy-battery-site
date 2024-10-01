@@ -12,9 +12,7 @@ export default function SystemForm() {
         <h1 className='font-semibold md:text-2xl'>Design Your System</h1>
 
         <p>
-          Megapack enables low-cost, high-density commercial and utility projects at large scale. It
-          ships ready to install with fully integrated battery modules, inverters, and thermal
-          systems. <br />
+          Megapack enables low-cost, high-density commercial and utility projects at large scale.
         </p>
       </div>
       <RequisitesSection />

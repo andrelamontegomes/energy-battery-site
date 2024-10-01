@@ -7,7 +7,7 @@ interface ButtonProps extends ComponentProps<'button'> {
 
 export default function Button({ text, icon }: ButtonProps) {
   return (
-    <button className='btn'>
+    <button className='btn btn-block'>
       {icon && (
         <svg
           xmlns='http://www.w3.org/2000/svg'

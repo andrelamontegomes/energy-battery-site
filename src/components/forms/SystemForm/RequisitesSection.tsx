@@ -6,6 +6,7 @@ import { calcTotalCost, calcTotalDimension, calcTotalEnergy } from '@/lib/system
 import { RequisitesContext } from '@/providers/RequisitesProvider';
 import { SystemContext } from '@/providers/SystemProvider';
 import Alert from '@/components/ui/Alert';
+import Card from '@/components/ui/Card';
 import NumberInput from '@/components/ui/NumberInput';
 
 export default function RequisitesSection() {
@@ -18,6 +19,10 @@ export default function RequisitesSection() {
   const dimensionError = totalDimension > Number(requisites.dimensions);
   const costError = totalCost > Number(requisites.budget);
   const energyError = totalEnergy > Number(requisites.energy);
+
+  const handleOptimize = (e: MouseEventHandler<HTMLButtonElement>) => {
+    console.log(e.target.name);
+  };
 
   return (
     <>
@@ -49,6 +54,23 @@ export default function RequisitesSection() {
             text='The current design does not meet your requirements'
           />
         )}
+      </div>
+      <div className='w-full flex flex-col space-y-2 mt-5'>
+        <Card
+          name='optimizeLand'
+          onClick={handleOptimize}
+          text='Optimize Land'
+        />
+        <Card
+          name='optimizeBudget'
+          onClick={handleOptimize}
+          text='Optimize Budget'
+        />
+        <Card
+          name='optimizeEnergy'
+          onClick={handleOptimize}
+          text='Optimize Energy Goal'
+        />
       </div>
     </>
   );
