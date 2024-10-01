@@ -25,28 +25,28 @@ export default function RequisitesSection() {
         <NumberInput
           error={dimensionError}
           name='dimensions'
-          label='Land Dimension (Sq Ft)'
+          label='Land Dimension Sq Ft'
           value={requisites.dimensions}
           onChange={handleChange}
         />
         <NumberInput
           error={costError}
           name='budget'
-          label='Budget ($)'
+          label='Budget $'
           value={requisites.budget}
           onChange={handleChange}
         />
         <NumberInput
           error={energyError}
           name='energy'
-          label='Energy Goal (MW)'
+          label='Energy Goal MW'
           value={requisites.energy}
           onChange={handleChange}
         />
         {(dimensionError || costError || energyError) && (
           <Alert
             icon
-            text='Your current design does not fulfill your requirements'
+            text='The current design does not meet your requirements'
           />
         )}
       </div>
