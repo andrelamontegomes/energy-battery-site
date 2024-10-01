@@ -17,14 +17,12 @@ export default function SystemSection() {
     <>
       <div className='flex flex-row justify-around py-10'>
         <div className='flex flex-col items-center'>
-          <h2 className='text-3xl md:text-lg font-medium'>{numberWithCommas(totalEnergy)} MW</h2>
-          <span className='font-bold md:text-sm text-gray-400'>Energy</span>
+          <h2 className='text-3xl font-medium'>{numberWithCommas(totalEnergy)} MW</h2>
+          <span className='font-bold text-gray-400'>Energy</span>
         </div>
         <div className='flex flex-col items-center'>
-          <h2 className='text-3xl md:text-lg font-medium'>
-            {numberWithCommas(totalDimension)} sq ft
-          </h2>
-          <span className='font-bold md:text-sm text-gray-400'>Sq Ft</span>
+          <h2 className='text-3xl font-medium'>{numberWithCommas(totalDimension)} sq ft</h2>
+          <span className='font-bold text-gray-400'>Sq Ft</span>
         </div>
       </div>
       <div className='space-y-5'>
